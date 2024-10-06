@@ -1,6 +1,6 @@
 let inventory = [];
 function addItem(name, category, quantity, price, supplier) {
-    const item = {
+    let item = {
         name: name,
         category: category,
         quantity: quantity,
@@ -10,28 +10,28 @@ function addItem(name, category, quantity, price, supplier) {
     inventory.push(item);
 }
 function listItems() {
-    inventory.forEach(item => {
+    inventory.forEach((item) => {
         console.log(`${item.name} - ${item.category} - Quantity: ${item.quantity} - Price: ${item.price} - Supplier: ${item.supplier}`);
     });
 }
 
 function calculateTotalValue() {
     let totalValue = 0;
-    inventory.forEach(item => {
+    inventory.forEach((item) => {
         totalValue = totalValue + item.quantity * item.price;
     });
     console.log(`Total Inventory Value: $${totalValue}`);
 }
 
 function findByCategory(category) {
-    const itemsInCategory = inventory.filter(item => item.category === category);
-    itemsInCategory.forEach(item => {
+    let itemsinCategory = inventory.filter((item) => item.category === category);
+    itemsinCategory.forEach((item) => {
         console.log(`${item.name} - ${item.category} - Quantity: ${item.quantity} - Price: ${item.price} - Supplier: ${item.supplier}`);
     });
 }
 
 function lowStockAlert() {
-    const lowStockItems = inventory.filter(item => item.quantity <= 5);
+    let lowStockItems = inventory.filter((item) => item.quantity <= 5);
     lowStockItems.forEach(item => {
         console.log(`${item.name} - ${item.category} - Quantity: ${item.quantity} - Price: ${item.price} - Supplier: ${item.supplier}`);
     });
