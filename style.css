@@ -29,14 +29,12 @@ main{
     border-radius: 8px;
     margin-bottom: 10px;
 }
-.discount-badge{
+.discount-label{
     background-color: #1a1a1a;
     color: white;
     width: 80px;
     padding: 4px 5px;
-    position:absolute;
-    top: 10px;
-    right: 10px;
+    
     border-radius: 5px;
     font-size: 12px;
 }
